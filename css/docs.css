@@ -8,25 +8,68 @@ body{
   flex-direction: column;
   align-items: center;
 }
+
 i{
   pointer-events: none;
 }
-.box-edit{
+input{
+  outline:none;
+}
+.cabecalho{
   width:100vw;
-  height:100px;
+  height:50px;
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
-.box-edit button{
+
+.box{
+  display: flex;
+}
+.box button{
   cursor:pointer;
   padding:5px;
   font-size:large;
   border:none;
   outline:none;
   background-color:transparent;
+  border-radius:5px ;
 }
-.box-edit button:hover{
+
+.box button:hover{
   background-color:rgb(224, 224, 224);
+}
+/*conteudo do box*/
+#font-family{
+  display: flex;
+  padding: 5px;
+  border-radius:5px ;
+  cursor: pointer;
+}
+#font-family:hover{
+  background-color:rgb(224, 224, 224);
+}
+#font-family *{
+  border: none;
+}
+#font-family p{
+  width:3rem;
+  background-color: transparent;
+}
+
+#txt-height{
+  display: flex;
+  align-items: center;
+  font-size: large;
+}
+#txt-height input{
+  width: 50px;
+  padding: 5px 8px;
+  text-align: center;
+}
+/* ----- */
+.metrica{
+  height: 30px;
 }
 #doc{
   width:90vw;
@@ -34,10 +77,6 @@ i{
   box-shadow: 2px 2px 3px gray;
   padding:5vh;
 }
-
-/* #paletaCores{
-  
-} */
 
 #paletaCores {
   display: grid;

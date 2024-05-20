@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+body{
+    height: 100vh;
+    /* width: calc(100vw - 20px); */
+    width: 100vw;
+}
+#footer-dashboard{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: end;
+    padding: 2rem;
+}
+#footer-dashboard button{
+    background-color:black;
+    color: #fff;
+    font-size: xx-large;
+    outline: none;
+    border: none;
+    border-radius: 100%;
+    padding: 2rem;
+}
+#corpo-docs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: .5rem;
+    padding: 2rem;
+    justify-items: center;
+}
+
+.documento-lay > div{
+    width: 200px;
+    height: 250px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+.documento-lay > p{
+    padding: .5rem;
+    text-align: center;
+}
+.documento-lay:hover{
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+/* area dos ids */
+#novo-documento{
+    cursor:pointer;
+}
+
+
