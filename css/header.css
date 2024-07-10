@@ -36,13 +36,13 @@ header{
     position: relative;
     padding: 2px 0;
     padding-left: 30px;
-    background-color: #333;
+    background-color: #e0e0e0;
     width: 100%;
     border-radius: 5px;
     outline: none;
     border: none;
     font-size: large;
-    color: #fff;
+    color: #000000;
 }
 #inp-bsc + label{
     position: absolute;

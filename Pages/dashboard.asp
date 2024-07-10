@@ -5,6 +5,15 @@ Dim SQL
 
 Dim c03id 
 
+Dim conn
+Dim connString
+
+connString = "Provider=SQLOLEDB; Data Source=DESKTOP-SOSJBEB; Initial Catalog=Docs; User ID=JoaoL; Password=123456789;"
+
+Set conn = Server.CreateObject("ADODB.Connection")
+conn.Open connString
+
+
 
 %>
 <!DOCTYPE html>
@@ -32,29 +41,28 @@ Dim c03id
             Response.Write szDocumentos()
         %>
     </div>
-    <footer id="footer-dashboard">
-        <button type="submit">
-            +
-        </button>
-    </footer>
 </body>
 </html>
 <%
 Function szDocumentos()
-Dim SQL 
+Dim SQL
+Dim RecAux
 Dim todosDocumentos
 Dim i 
 
+SQL = "SELECT * FROM documentos"
+Set RecAux = conn.execute(SQL)
+
 ' i = 1
-For i = 1 To 5
+while Not RecAux.EOF 
     todosDocumentos = todosDocumentos _
     & "<div class='documento-lay' id='novo-documento'>" _ 
     & "<div></div>" _
-    & "<p>Documento " & i & "</p>" _ 
+    & "<p>" & RecAux("titulo") & "</p>" _ 
     & "</div>"
+    RecAux.MoveNext 
+wend 
 
-    ' i = i + 1
-Next
 szDocumentos = todosDocumentos
 End Function 
 %>

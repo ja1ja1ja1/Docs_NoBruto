@@ -7,6 +7,10 @@ body{
   display:flex;
   flex-direction: column;
   align-items: center;
+  word-wrap: break-word;
+}
+.modoDark{
+  background-color: black;
 }
 
 i{
@@ -15,16 +19,27 @@ i{
 input{
   outline:none;
 }
+#doc{
+  word-wrap: break-word;
+  height: 100vh;
+  outline: none;
+}
+
+.selecionado{
+  background-color: #ddd !important;
+}
 .cabecalho{
   width:100vw;
   height:50px;
   display: flex;
   justify-content: center;
+  gap:15px;
   padding: 10px;
 }
 
 .box{
   display: flex;
+  gap:5px;
 }
 .box button{
   cursor:pointer;
@@ -75,21 +90,34 @@ input{
   width:90vw;
   height:calc(100vh - 100px);
   box-shadow: 2px 2px 3px gray;
-  padding:5vh;
+  padding:5vh 15vh;
+  background-color: #FFF;
 }
 
 #paletaCores {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+
+}
+.boxFloat{
   justify-items: center;
   position: absolute;
-  padding: 10px;
+  padding: 3px;
   border: 1px solid #cccccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width:200px;
+  max-height: 300px;
+  overflow-y: scroll;
   background-color: rgb(255, 255, 255);
 }
 
-#paletaCores div{
+.boxFloat div{
   cursor:pointer;
+}
+.boxFloat div:hover{
+  background-color:#ddd !important;
+}
+
+#listFont div{
+  padding: 5px;
 }
